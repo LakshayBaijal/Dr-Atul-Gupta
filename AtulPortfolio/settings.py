@@ -25,9 +25,9 @@ static_dir = os.path.join(BASE_DIR,'static')
 SECRET_KEY = 'django-insecure-b2s%q!77j6a5oowlzw&8%h#%5y6h7xx%p0bb@fo5i*7x#)r5b('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -117,6 +117,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS=[
